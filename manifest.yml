@@ -1,0 +1,12 @@
+applications:
+- name: my-movie-fun
+  path: ./build/libs/moviefun-1.1.0-SNAPSHOT.war
+  host: my-movie-fun-icg
+  memory: 1G
+  instances: 1
+  env:
+    S3_ACCESSKEY: AKIAJQ2H7DQR7FV6TGDA
+    S3_SECRETKEY: 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
+    S3_BUCKETNAME: student-artifacts-upsilon
+  services:
+  - mysql-db-music-fun

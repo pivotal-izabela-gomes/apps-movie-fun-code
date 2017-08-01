@@ -1,3 +1,5 @@
+server.port: 8080
+
 spring:
   jpa:
     generate-ddl: true
@@ -11,11 +13,19 @@ spring:
     prefix: /WEB-INF/
     suffix: .jsp
 
+  profiles:
+    active: development
+
 logging.level:
   root: WARN
   org.superbiz.moviefun: DEBUG
 
 s3:
-  accessKey: <access key id>
-  secretKey: <secret access key>
-  bucketName: <name of the bucket>
+  accessKey: AKIAJQ2H7DQR7FV6TGDA
+  secretKey: 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
+  bucketName: student-artifacts-upsilon
+
+albums:
+  url: http://localhost:8081/albums
+movies:
+  url: http://localhost:8082/movies

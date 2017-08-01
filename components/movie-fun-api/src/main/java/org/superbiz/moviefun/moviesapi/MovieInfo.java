@@ -16,28 +16,20 @@
  */
 package org.superbiz.moviefun.moviesapi;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class MovieInfo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-
-    private String director;
+    private Long id;
     private String title;
-    private int year;
+    private String director;
     private String genre;
     private int rating;
+    private int year;
 
     public MovieInfo() {
     }
 
-    public MovieInfo(String title, String director, String genre, int rating, int year) {
+    public MovieInfo(Long id, String title, String director, String genre, int rating, int year) {
+        this.id = id;
         this.director = director;
         this.title = title;
         this.year = year;
@@ -45,13 +37,7 @@ public class MovieInfo {
         this.rating = rating;
     }
 
-    public MovieInfo(String director, String title, int year) {
-        this.director = director;
-        this.title = title;
-        this.year = year;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

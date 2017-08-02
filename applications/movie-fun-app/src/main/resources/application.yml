@@ -9,6 +9,8 @@ spring:
   mvc.view:
     prefix: /WEB-INF/
     suffix: .jsp
+#  profiles:
+#    active: development
 
 logging.level:
   root: WARN
@@ -23,3 +25,7 @@ albums:
   url: http://localhost:8081/albums
 movies:
   url: http://localhost:8082/movies
+
+security:
+    basic:
+        enabled: false

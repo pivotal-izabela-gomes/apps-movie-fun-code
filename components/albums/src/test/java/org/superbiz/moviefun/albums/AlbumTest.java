@@ -9,13 +9,13 @@ public class AlbumTest {
 
     @Test
     public void testIsEquivalent() {
-        Album persisted = new Album("Radiohead", "OK Computer", 1997, 8);
+        Album persisted = new Album(null, "Radiohead", "OK Computer", 1997, 8);
         persisted.setId(10L);
 
-        Album sameFromCsv = new Album("Radiohead", "OK Computer", 1997, 9);
+        Album sameFromCsv = new Album(null, "Radiohead", "OK Computer", 1997, 9);
         assertThat(persisted.isEquivalent(sameFromCsv), is(true));
 
-        Album otherFromCsv = new Album("Radiohead", "Kid A", 2000, 9);
+        Album otherFromCsv = new Album(null, "Radiohead", "Kid A", 2000, 9);
         assertThat(persisted.isEquivalent(otherFromCsv), is(false));
     }
 }
